@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="32dp"
+    android:layout_marginRight="32dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_icon_reward" />
+
+    <Space style="@style/Space.OverMini" />
+
+    <TextView
+        style="@style/TextView"
+        android:text="@string/email" />
+
+    <EditText
+        android:id="@+id/et_email_id_login"
+        style="@style/EditText"
+        android:hint="@string/enter_your_email" />
+
+    <TextView
+        style="@style/TextView"
+        android:text="@string/pass" />
+
+    <EditText
+        android:id="@+id/et_email_id_pass"
+        style="@style/EditText"
+        android:hint="@string/enter_your_pass" />
+
+    <Space style="@style/Space.OverMini" />
+
+    <Button
+        style="@style/Button.Normal"
+        android:text="@string/sign_up" />
+
+    <Space style="@style/Space.Mini" />
+
+    <TextView
+        android:id="@+id/tvLink"
+        style="@style/TextView"
+        android:layout_gravity="center"
+        android:autoLink="all"
+        android:text="@string/forgot_your_password" />
+
+    <Space style="@style/Space.OverMini" />
+
+    <TextView
+        style="@style/TextView"
+        android:layout_gravity="center"
+        android:text="@string/already_signed_up" />
+
+    <Space style="@style/Space.MiniTrim" />
+
+    <Button
+        style="@style/Button.Normal"
+        android:text="@string/login" />
+</LinearLayout>
