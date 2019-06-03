@@ -1,108 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginLeft="32dp"
+    android:layout_marginRight="32dp"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginRight="32dp"
-        android:orientation="vertical">
-
-        <ImageView
-            android:layout_width="96dp"
-            android:layout_height="96dp"
-            android:layout_gravity="center"
-            android:scaleType="fitXY"
-            android:src="@drawable/ic_icon_reward" />
-
-        <Space style="@style/Space.Mini" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/welcome_to_quizz"
-            android:textColor="@color/primary_text"
-            android:textSize="32sp"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/connect_with_friends"
-            android:textColor="@color/secondary_text"
-            android:textSize="16sp"
-            android:textStyle="normal" />
-
-        <Space style="@style/Space.OverMini" />
-
-    </LinearLayout>
-
-    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="32dp"
-        android:layout_marginRight="32dp"
         android:orientation="vertical">
-
-        <Button
-            android:id="@+id/btn_sign_up_fb"
-            style="@style/Button.Normal"
-            android:layout_width="match_parent"
-            android:layout_gravity="center"
-            android:text="@string/sign_up_with_fb" />
-
-        <Space style="@style/Space.MiniTrim" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/or"
-            android:textColor="@color/primary_text"
-            android:textSize="30sp"
-            android:textStyle="bold" />
-
-        <Space style="@style/Space.MiniTrim" />
-
-        <Button
-            android:id="@+id/btn_sign_up"
-            style="@style/Button.Normal"
-            android:layout_width="match_parent"
-            android:layout_gravity="center"
-            android:text="@string/sign_up_with_email" />
-
-        <Space style="@style/Space.Mini" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:orientation="horizontal">
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="32dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_icon_reward" />
+
+            <Space style="@style/Space.Mini" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/welcome_to_quizz"
+                android:textColor="@color/primary_text"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/connect_with_friends"
+                android:textColor="@color/secondary_text"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+
+            <Space style="@style/Space.OverMini" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_sign_up_fb"
+                style="@style/Button.Normal"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:text="@string/sign_up_with_fb" />
+
+            <Space style="@style/Space.MiniTrim" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="@string/already_signed_up"
-                android:textColor="@color/secondary_text"
-                android:textSize="20sp"
-                android:textStyle="normal" />
+                android:text="@string/or"
+                android:textColor="@color/primary_text"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <Space style="@style/Space.MiniTrim" />
 
             <Button
+                android:id="@+id/btn_sign_up_main"
                 style="@style/Button.Normal"
-                android:background="@android:color/transparent"
-                android:text="@string/login_now" />
-        </LinearLayout>
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:text="@string/sign_up_with_email" />
 
+            <Space style="@style/Space.Mini" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextView.Normal.Grey"
+                    android:layout_gravity="center"
+                    android:text="@string/already_signed_up" />
+
+                <Button
+                    style="@style/Button.Normal"
+                    android:background="@android:color/transparent"
+                    android:text="@string/login_now" />
+            </LinearLayout>
+
+        </LinearLayout>
     </LinearLayout>
 
-</LinearLayout>
+
+</ScrollView>
