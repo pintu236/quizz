@@ -3,9 +3,10 @@ package tk.indieme.quizz;
 public interface SignUpContract {
 
     interface SignUpView {
-        void showMessage();
+        void showMessage(String email,String password);
 
         void showError(String message);
+
     }
 
     interface SignUpPresenter {
