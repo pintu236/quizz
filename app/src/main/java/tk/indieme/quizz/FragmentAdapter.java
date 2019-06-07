@@ -1,15 +1,19 @@
 package tk.indieme.quizz;
 
+import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-import tk.indieme.quizz.login.LoginFragment;
-import tk.indieme.quizz.signup.SignupFragment;
+import tk.indieme.quizz.ui.signup.SignupFragment;
+import tk.indieme.quizz.ui.ui.login.LoginFragment;
 
 public class FragmentAdapter extends FragmentPagerAdapter {
 
     private int tabCount;
+    private Fragment mCurrentFragment;
 
     public FragmentAdapter(FragmentManager fm, int tabCount) {
         super(fm);
@@ -30,6 +34,19 @@ public class FragmentAdapter extends FragmentPagerAdapter {
         }
 
     }
+
+    public Fragment getCurrentFragment() {
+        return mCurrentFragment;
+    }
+
+    @Override
+    public void setPrimaryItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
+        if (getCurrentFragment() != object) {
+            mCurrentFragment = ((Fragment) object);
+        }
+        super.setPrimaryItem(container, position, object);
+    }
+
 
     @Override
     public int getCount() {

@@ -55,6 +55,7 @@
         <Space style="@style/Space.MiniTrim" />
 
         <Button
+            android:id="@+id/btn_sign_up_in_login"
             style="@style/Button.Normal"
             android:background="@android:color/transparent"
             android:text="@string/sign_up_with_email" />

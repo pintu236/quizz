@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="start"
+            android:background="@drawable/round_button"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_gk"
+            android:textColor="#fff" />
+
+        <Space
+            style="@style/Space.MiniTrim"
+            android:layout_width="64dp" />
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/round_button"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_science" />
+
+        <Space
+            style="@style/Space.MiniTrim"
+            android:layout_width="64dp" />
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="end"
+            android:background="@drawable/round_button"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_tech" />
+    </LinearLayout>
+
+
+</LinearLayout>
