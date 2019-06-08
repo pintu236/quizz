@@ -1,6 +1,7 @@
 package tk.indieme.quizz;
 
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,11 +13,20 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
+import com.google.firebase.auth.FirebaseAuth;
+
+import tk.indieme.quizz.ui.main.HomeActivity;
+
 public class WelcomeFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        if (FirebaseAuth.getInstance().getCurrentUser() != null) {
+            //close this activity
+            getActivity().finish();
+            //opening profile activity
+            startActivity(new Intent(getActivity(), HomeActivity.class));
+        }
     }
 
     @Nullable

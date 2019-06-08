@@ -6,60 +6,75 @@
     android:layout_marginRight="32dp"
     android:orientation="vertical">
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <ImageView
-            android:layout_width="96dp"
-            android:layout_height="96dp"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="32dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_icon_reward" />
+
+            <Space style="@style/Space.OverMini" />
+
+            <TextView
+                style="@style/TextView.Normal.Black"
+                android:text="@string/email" />
+
+            <EditText
+                android:id="@+id/et_email_id_login"
+                style="@style/EditText"
+                android:hint="@string/enter_your_email" />
+
+            <TextView
+                style="@style/TextView.Normal.Black"
+                android:text="@string/pass" />
+
+            <EditText
+                android:id="@+id/et_pass_login"
+                style="@style/EditText"
+                android:hint="@string/enter_your_pass" />
+
+            <Space style="@style/Space.OverMini" />
+
+            <Button
+                android:id="@+id/btn_login"
+                style="@style/Button.Normal"
+                android:text="@string/login" />
+
+            <Space style="@style/Space.OverMini" />
+
+            <TextView
+                style="@style/TextView.Normal.Grey"
+                android:layout_gravity="center"
+                android:text="@string/no_account_yet" />
+
+            <Space style="@style/Space.MiniTrim" />
+
+            <Button
+                android:id="@+id/btn_sign_up_in_login"
+                style="@style/Button.Normal"
+                android:background="@android:color/transparent"
+                android:text="@string/sign_up_with_email" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/pb_log_in"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="32dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/ic_icon_reward" />
-
-        <Space style="@style/Space.OverMini" />
-
-        <TextView
-            style="@style/TextView.Normal.Black"
-            android:text="@string/email" />
-
-        <EditText
-            android:id="@+id/et_email_id_login"
-            style="@style/EditText"
-            android:hint="@string/enter_your_email" />
-
-        <TextView
-            style="@style/TextView.Normal.Black"
-            android:text="@string/pass" />
-
-        <EditText
-            android:id="@+id/et_email_id_pass"
-            style="@style/EditText"
-            android:hint="@string/enter_your_pass" />
-
-        <Space style="@style/Space.OverMini" />
-
-        <Button
-            style="@style/Button.Normal"
-            android:text="@string/login" />
-
-        <Space style="@style/Space.OverMini" />
-
-        <TextView
-            style="@style/TextView.Normal.Grey"
-            android:layout_gravity="center"
-            android:text="@string/no_account_yet" />
-
-        <Space style="@style/Space.MiniTrim" />
-
-        <Button
-            android:id="@+id/btn_sign_up_in_login"
-            style="@style/Button.Normal"
-            android:background="@android:color/transparent"
-            android:text="@string/sign_up_with_email" />
-    </LinearLayout>
+            android:indeterminate="true"
+            android:visibility="invisible" />
+    </FrameLayout>
 
 
 </ScrollView>

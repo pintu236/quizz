@@ -7,8 +7,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
+import tk.indieme.quizz.ui.login.LoginFragment;
 import tk.indieme.quizz.ui.signup.SignupFragment;
-import tk.indieme.quizz.ui.ui.login.LoginFragment;
 
 public class FragmentAdapter extends FragmentPagerAdapter {
 
